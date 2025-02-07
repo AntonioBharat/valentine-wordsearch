@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes-btn {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no-btn {
+            background-color: #999;
+            color: white;
+        }
+        #dateDetails {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffcccc;
+            border-radius: 5px;
+        }
+        #noMessage {
+            display: none;
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Valentine?</h1>
+        
+        <!-- Embedded Word Search  <iframe src="https://wordsearchlabs.com/embed/794910" frameborder="0" width="400" height="500"></iframe> -->
+       
+        <iframe src="https://wordsearchlabs.com/embed/794910" width="100%" height="500px" style="border: none;"></iframe>
+        
+        <p>Once you find the hidden message, click below!</p>
+        
+        <div class="buttons">
+            <button class="yes-btn" onclick="showDate()">Yes ❤️</button>
+            <button class="no-btn" onclick="showNo()">No 💔</button>
+        </div>
+        
+        <div id="dateDetails">
+            <h2>Yay! Here are our date details:</h2>
+            <p><strong>Date:</strong> February 14</p>
+            <p><strong>Time:</strong> 7 PM</p>
+            <p><strong>Location:</strong> [Your Chosen Place]</p>
+            <p>Can't wait to see you! 😊</p>
+        </div>
+        
+        <p id="noMessage">Oh no! Maybe next year? 😭</p>
+    </div>
+    
+    <script>
+        function showDate() {
+            document.getElementById("dateDetails").style.display = "block";
+            document.getElementById("noMessage").style.display = "none";
+        }
+        
+        function showNo() {
+            document.getElementById("noMessage").style.display = "block";
+            document.getElementById("dateDetails").style.display = "none";
+        }
+    </script>
+</body>
+</html>
